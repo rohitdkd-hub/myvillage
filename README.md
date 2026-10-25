@@ -1,38 +1,94 @@
-My Village — Java-powered site
+# My Village — Palchha Village Website
 
-This folder contains the Palchha village website. The Java server handles contact form validation, the backend greeting, and the current year.
+A village website for Palchha in Chittorgarh, Rajasthan. The project includes a static frontend and a Java backend that handles form validation and server-side responses.
 
-Run locally with Java
+## Features
+
+- Village information and overview
+- Photo gallery with Chittorgarh Fort imagery
+- Java backend for greeting and current-year logic
+- Contact form validation and server response handling
+- External weather and map links
+
+## Project Structure
+
+```text
+project_site./
+├── backend/
+│   ├── Ser.java
+│   ├── Ser.class
+│   ├── Ser$Shop.class
+│   └── nano main.go
+├── frontend/
+│   ├── index.html
+│   ├── styles.css
+│   ├── README.md
+│   └── palchha back.jpg
+├── index.html
+├── styles.css
+├── palchha back.jpg
+├── README.md
+├── typing speed
+└── .gitignore
+```
+
+The project root contains the main site files, while the frontend folder contains a separate static copy used for local testing or deployment.
+
+## Run Locally
+
+### Requirements
+
+- Java Development Kit (JDK)
+- Terminal or command-line interface
+
+### Start the Java server
+
+From the project root, compile and run the backend:
 
 ```bash
-cd /home/rohit/Desktop/project_site.
+cd "/home/rohit/Desktop/project_site."
 javac backend/Ser.java
 java -cp backend Ser
 ```
 
-Open http://localhost:8080/. Run the commands from the project root so the server can find the site files. The separate copy under `/frontend/` is available at http://localhost:8080/frontend/index.html.
+Then open the app in a browser:
 
-Upload the source to GitHub
+- Main site: http://localhost:8080/
+- Frontend copy: http://localhost:8080/frontend/index.html
 
-Create an empty GitHub repository, then run these commands from this folder (replace the URL with your repository URL):
+The Java backend must run from the project root so its relative file paths resolve correctly.
+
+## Deployment
+
+### Static hosting
+
+The frontend can be hosted on services such as Netlify or Vercel.
+
+- Netlify: upload the static site or connect the repository and set the publish directory appropriately.
+- Vercel: run `vercel` in the project folder and follow the prompts.
+
+Note: static hosting alone does not run the Java server. Backend features such as validation and server-side responses require Java hosting or another compatible server environment.
+
+## GitHub
+
+This repository is already connected to GitHub via the `origin` remote.
+
+If you want to push new changes manually:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/myvillage.git
-git push -u origin main
+git add .
+git commit -m "Update project documentation"
+git push origin main
 ```
 
-This uploads the project source. GitHub Pages can host the static pages, but it cannot run this Java server or the contact form endpoint; deploy the Java backend separately for those features.
+## Notes
 
-Deploy to Netlify (drag & drop)
+- The gallery uses Wikimedia Commons image links.
+- Weather and map links direct visitors to external services.
+- The frontend can be deployed statically, while backend functionality requires a running Java server.
 
-- Zip the contents of this folder and drop it on the Netlify Sites dashboard, or connect your GitHub repository to Netlify for automatic deploys.
+## Future Improvements
 
-Deploy to Vercel
-
-- Run `vercel` in this folder (install `vercel` CLI first) and follow prompts.
-
-Notes
-- The two Chittorgarh Fort gallery photos are served from Wikimedia Commons and include photo credits and license links.
-- The site has no JavaScript assets. Gallery links open images directly, and weather/map links go to the relevant external service.
-
-If you want, I can push this repo to GitHub for you (you'll need to provide the repo URL or give me permission to use your account via `gh`/CLI). I can also deploy directly to Netlify/Vercel if you authenticate locally — tell me which hosting you prefer and I'll continue.
+- Deploy the Java backend to a Java-compatible hosting service
+- Connect the contact form to a real data source or email system
+- Improve the frontend and backend integration for production deployment
