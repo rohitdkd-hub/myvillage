@@ -15,21 +15,17 @@ A village website for Palchha in Chittorgarh, Rajasthan. The project includes a 
 ```text
 project_site./
 ├── backend/
-│   ├── Ser.java
-│   ├── Ser.class
-│   ├── Ser$Shop.class
-│   └── nano main.go
+│   └── Ser.java
 ├── frontend/
 │   ├── index.html
 │   ├── styles.css
-│   ├── README.md
-│   └── palchha back.jpg
+│   └── README.md
 ├── index.html
 ├── styles.css
 ├── palchha back.jpg
 ├── README.md
-├── typing speed
-└── .gitignore
+├── .gitignore
+└── .nojekyll
 ```
 
 The project root contains the main site files, while the frontend folder contains a separate static copy used for local testing or deployment.
