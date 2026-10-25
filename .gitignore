@@ -1,0 +1,17 @@
+# Ignore common OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Java build output
+*.class
+
+# Local editor/workspace metadata
+.sixth/
